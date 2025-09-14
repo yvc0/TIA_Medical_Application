@@ -1,69 +1,106 @@
-# 🩺 Diabetes Prediction App
+# 🏥 Medical Risk Prediction App
 
-This is a Streamlit-based web application that uses a Logistic Regression model to predict whether a patient is diabetic or not based on health-related parameters. The app provides prediction results along with model accuracy and confidence level.
-
----
-
-## 📊 Features
-
-- Accepts 8 health-related inputs from the user.
-- Predicts whether the patient is **Diabetic** or **Not Diabetic**.
-- Displays:
-  - Model **accuracy** (trained on real data)
-  - **Prediction confidence** (% likelihood of diabetes)
+This is a simple **Streamlit-based web application** that predicts an individual's **health risk level** (Low, Medium, or High) based on basic medical and lifestyle details.  
+It provides personalized **suggestions** for maintaining or improving health.
 
 ---
 
-## 🧾 Input Features
-
-1. **Pregnancies**
-2. **Glucose Level**
-3. **Blood Pressure**
-4. **Skin Thickness**
-5. **Insulin**
-6. **BMI** (Body Mass Index)
-7. **Diabetes Pedigree Function**
-8. **Age**
-
----
-
-## 📁 Project Structure
-
-diabetes-predictor/
-│
-├── app.py # Streamlit app code
-├── data.csv # Dataset (Pima Indians Diabetes Dataset)
-└── README.md # Project instructions
-
+## 🚀 Features
+- Easy-to-use **web interface** with input fields for:
+  - Age
+  - Blood Pressure
+  - Blood Sugar
+  - Cholesterol
+  - BMI Category
+  - Smoking Habit
+  - Alcohol Consumption
+  - Physical Activity
+  - Family History of Disease
+- Calculates a **Risk Score** using predefined rules.
+- Displays prediction as:
+  - ✅ Low Risk  
+  - ⚠️ Medium Risk  
+  - 🚨 High Risk  
+- Provides **health suggestions** based on the prediction.
 
 ---
 
-## ⚙️ Requirements
-
-- Python 3.7+
-- Streamlit
-- Scikit-learn
-- Pandas
-- NumPy
+## 📂 Project Structure
+```
+medical-prediction-app/
+├── medical_app.py   # Main Streamlit application
+├── requirements.txt # Dependencies
+└── README.md        # Project documentation
+```
 
 ---
 
-## 📦 Install Dependencies
+## 📦 Installation
 
-Create a virtual environment (optional but recommended):
+1. **Clone this repository** (or copy project files):
+   ```bash
+   git clone https://github.com/your-username/medical-prediction-app.git
+   cd medical-prediction-app
+   ```
 
+2. **Create a virtual environment** (optional but recommended):
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # Linux/Mac
+   venv\Scripts\activate      # Windows
+   ```
+
+3. **Install required packages**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+## ▶️ Run the Application
+Run the Streamlit app with:
 ```bash
-python -m venv venv
-source venv/bin/activate      # On Windows: venv\Scripts\activate
-## Install the required dependencies:
-```bash
-pip install -r requirements.txt
+streamlit run medical_app.py
+```
 
-## 🚀 How to Run the App 
-
-Ensure data.csv is present in the same folder as app.py.
-
-Launch the Streamlit app:
-
-Open your browser and go to:
+The app will open in your browser at:
+```
 http://localhost:8501
+```
+
+---
+
+## 📊 Example Usage
+- Select **Age: 45**
+- Blood Pressure: **High**
+- Sugar: **Borderline**
+- Cholesterol: **High**
+- BMI: **Overweight**
+- Smoking: **Occasional**
+- Alcohol: **Occasional**
+- Activity: **Low**
+- Family History: **Yes**
+
+👉 The app may predict **🚨 High Risk** and suggest consulting a doctor.
+
+---
+
+## 🛠 Requirements
+Contents of `requirements.txt`:
+```
+streamlit
+```
+
+---
+
+## 💡 Future Improvements
+- Integrate with a **real medical dataset** and machine learning models.
+- Add **charts & dashboards** for better visualization.
+- Export results to **PDF or CSV**.
+- Multi-user login with saved health reports.
+
+---
+
+## 📌 Disclaimer
+⚠️ This app is for **educational purposes only** and does not replace professional medical advice.  
+Please consult a doctor for accurate diagnosis and treatment.
